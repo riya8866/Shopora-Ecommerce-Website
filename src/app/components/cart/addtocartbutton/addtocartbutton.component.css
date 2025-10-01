@@ -1,0 +1,21 @@
+
+/* Add to cart button */
+mat-card-actions {
+  display: flex;
+  justify-content: center;
+}
+
+mat-card-actions button {
+  background: linear-gradient(90deg, #00796b, #004d40);
+  color: #fff !important;
+  border-radius: 25px;
+  padding: 6px 18px;
+  font-size: 0.9rem;
+  text-transform: none;
+  transition: background 0.3s, transform 0.2s;
+}
+
+mat-card-actions button:hover {
+  background: linear-gradient(90deg, #009688, #00695c);
+  transform: scale(1.05);
+}

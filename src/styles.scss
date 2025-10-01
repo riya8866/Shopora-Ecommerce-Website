@@ -1,0 +1,83 @@
+/* Import Angular Material theming utilities */
+@use '@angular/material' as mat;
+
+/* Define brand colors */
+$primary-color: #004f4f; // teal-dark
+$background-color: #f8f9f9; // off-white
+$warn-color: #d32f2f; // standard red
+
+/* Create Material color palettes */
+$custom-primary: mat.define-palette(mat.$teal-palette, 900);
+$custom-accent: mat.define-palette(mat.$grey-palette, 100); // light grey/off-white
+$custom-warn: mat.define-palette(mat.$red-palette);
+
+/* Define a light theme */
+$custom-theme: mat.define-light-theme((
+  color: (
+    primary: $custom-primary,
+    accent: $custom-accent,
+    warn: $custom-warn,
+  ),
+  typography: mat.define-typography-config(),
+  density: 0,
+));
+
+/* Apply theme to Angular Material components */
+@include mat.all-component-themes($custom-theme);
+
+/* Global styles */
+html, body {
+  margin: 0;
+  height: 100%;
+  font-family: Roboto, Arial, sans-serif;
+  background-color: $background-color;
+  color: $primary-color;
+}
+
+/* Header */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: $primary-color;
+  color: $background-color;
+
+  .logo-container {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .nav-container a {
+    color: $background-color;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: 500;
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+      color: lighten($background-color, 10%);
+      text-decoration: underline;
+    }
+  }
+}
+
+/* Buttons */
+.mat-mdc-raised-button,
+.mat-mdc-outlined-button {
+  font-weight: 500;
+}
+
+/* Cards */
+.mat-mdc-card {
+  border-radius: 8px;
+  background-color: $background-color;
+  color: $primary-color;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Icons */
+.mat-icon {
+  vertical-align: middle;
+  color: inherit;
+}

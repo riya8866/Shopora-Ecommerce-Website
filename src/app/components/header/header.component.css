@@ -1,0 +1,83 @@
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 2rem;
+  background-color: #004f4f;
+  color: #f8f9f9;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-container {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.logo-container a {
+  color: #f8f9f9; 
+  text-decoration: none;
+}
+
+.logo-container a:hover,
+.logo-container a:focus,
+.logo-container a:active {
+  color: #e0e0e0;
+  text-decoration: none;
+}
+
+.nav-container {
+  flex: 1;
+  text-align: center;
+}
+
+.nav-container a {
+  color: #f8f9f9;
+  text-decoration: none;
+  margin: 0 1.2rem;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.nav-container a:hover,
+.nav-container a:focus,
+.nav-container a:active {
+  color: #e0e0e0;
+  transform: scale(1.05);
+}
+
+.actions-container {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.actions-container button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.actions-container button:hover,
+.actions-container button:focus {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.mat-icon {
+  color: #f8f9f9;
+  font-size: 1.6rem;
+  vertical-align: middle;
+}
+
+.active-link {
+  border-bottom: 2px solid #f8f9f9;
+  font-weight: bold;
+}

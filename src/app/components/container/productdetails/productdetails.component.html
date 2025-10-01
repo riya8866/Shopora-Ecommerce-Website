@@ -1,0 +1,24 @@
+<div *ngIf="product" class="product-details">
+  <mat-card>
+    <div class="details-container">
+
+      <!-- Left: Back + Image -->
+      <div class="image-container">
+        <button mat-button class="back-btn" routerLink="/products">
+          ← Back to Products
+        </button>
+        <img mat-card-image [src]="product.image" [alt]="product.title" />
+      </div>
+
+      <!-- Right: Product Info -->
+      <div class="info-container">
+        <mat-card-title>{{ product.title }}</mat-card-title>
+        <mat-card-subtitle>${{ product.price }}</mat-card-subtitle>
+        <mat-card-content>
+          <p>{{ product.description }}</p>
+        </mat-card-content>
+          <app-addtocartbutton></app-addtocartbutton>
+      </div>
+    </div>
+  </mat-card>
+</div>

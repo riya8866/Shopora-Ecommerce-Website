@@ -1,0 +1,35 @@
+<div class="contact-page">
+  <div class="contact-left">
+    <h2>Feel Free to Contact Us</h2>
+    <p>
+      We would love to hear from you! Whether you have a question, suggestion, or just want to say hello, feel free to reach out.
+    </p>
+    <div class="social-icons">
+      <a href="https://linkedin.com" target="_blank"><mat-icon>linkedin</mat-icon></a>
+      <a href="mailto:example@email.com"><mat-icon>email</mat-icon></a>
+      <a href="https://instagram.com" target="_blank"><mat-icon>instagram</mat-icon></a>
+      <a href="https://twitter.com" target="_blank"><mat-icon>twitter</mat-icon></a>
+    </div>
+  </div>
+
+  <div class="contact-right">
+    <form (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Name</mat-label>
+        <input matInput [(ngModel)]="name" name="name" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Email</mat-label>
+        <input matInput [(ngModel)]="email" name="email" required email />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Message</mat-label>
+        <textarea matInput [(ngModel)]="message" name="message" required></textarea>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit">Send Message</button>
+    </form>
+  </div>
+</div>

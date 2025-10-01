@@ -1,0 +1,22 @@
+<!-- Landing Page -->
+
+<div class="home-container">
+  
+  <h1>Welcome to Our Store</h1>
+  <p>Search products below or browse our collection.</p>
+
+  <!-- Centered Search Bar -->
+  <div class="home-search">
+    <!-- Two-way bind query + listen to search event -->
+    <app-search 
+      [(query)]="query" 
+      (search)="onSearch($event)">
+    </app-search>
+  </div>
+
+  <!-- Browse Products Input Space with Icon -->
+  <button mat-raised-button color="primary" class="browse-btn" (click)="goToProducts()">
+    <mat-icon class="btn-icon">shopping_cart</mat-icon>
+    Browse Products
+  </button>
+</div>

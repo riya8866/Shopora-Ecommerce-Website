@@ -1,0 +1,15 @@
+<mat-card-actions>
+  <button
+    *ngIf="quantity === 0"
+    mat-button
+    color="primary"
+    (click)="addToCart(); $event.stopPropagation()">
+    Add to Cart
+  </button>
+
+  <div *ngIf="quantity > 0" class="quantity-controls" (click)="$event.stopPropagation()">
+    <button mat-mini-button color="warn" (click)="decrement()">-</button>
+    <span>{{ quantity }}</span>
+    <button mat-mini-button color="primary" (click)="increment()">+</button>
+  </div>
+</mat-card-actions>

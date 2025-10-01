@@ -1,0 +1,25 @@
+/* Space between header and search bar */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem; /* gap below header */
+  margin-bottom: 0.5rem;
+}
+
+/* Width of the search bar */
+.search-field {
+  width: 60%; /* adjust as needed */
+  margin-bottom: 0px;
+}
+
+/* Fill input with white and rounded edges */
+.search-field .mat-form-field-flex {
+  background-color: #ffffff; /* white background */
+  border-radius: 25px;       /* rounded edges */
+  padding-left: 0.5rem;
+}
+
+/* Optional: search icon color */
+.search-field button.mat-icon-button {
+  color: #004f4f; /* match your header color */
+}

@@ -1,0 +1,20 @@
+<div class="header-container">
+    <div class="logo-container">
+         <a routerLink="/">Shopora</a>
+    </div>
+    <div class="nav-container">
+      <a routerLink="/">Home</a>
+      <a routerLink="/products">Products</a>
+      <!-- <a routerLink="/new-arrivals">New Arrival</a> -->
+      <a routerLink="/contact">Contact</a>
+   
+        <!-- <a *ngFor="let menu of menuItems" href="#">{{menu}}</a> -->
+    </div>
+   <div class="actions-container">
+    <button mat-icon-button routerLink="/login" routerLinkActive="active-link">
+      <mat-icon>person</mat-icon>
+    </button>
+    <button mat-icon-button routerLink="/cart" routerLinkActive="active-link">
+      <mat-icon>shopping_cart</mat-icon>
+    </button>
+</div>
